@@ -25,4 +25,4 @@
         </div>
     </div>
 @endsection
-拡大表示
+
