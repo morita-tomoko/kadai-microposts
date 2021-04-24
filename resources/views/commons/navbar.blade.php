@@ -18,14 +18,12 @@
                             <ul class="dropdown-menu dropdown-menu-right">
                                 {{-- ユーザ詳細ページへのリンク --}}
                                 <li class="dropdown-item">{!! link_to_route('users.show', 'My profile', ['user' => Auth::id()]) !!}</li>
-                                <li class="dropdown-divider"></li>
                             　  {{-- お気に入り へのリンク--}}
-                                <li class="dropdown-item">{!! link_to_route('users.favorites', 'Favorite',  ['id' => $user->id]) !!}</li>
-                                </li>
+                                <li class="dropdown-item">{!! link_to_route('users.favorites', 'Favorite',  ['id' => Auth::id()]) !!}</li>
+                                <li class="dropdown-divider"></li>
                                 {{-- ログアウトへのリンク --}}
                                 <li class="dropdown-item">{!! link_to_route('logout.get', 'Logout') !!}</li>
-                                </li>
-                            </ul>
+            </ul>
                     </li>
                 @else
                     {{-- ユーザ登録ページへのリンク --}}
